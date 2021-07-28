@@ -1,0 +1,13 @@
+name: Scheduled build
+
+on:
+  schedule:
+    - cron: '30 * * * *'
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: curl
+        run: echo "run actions"
